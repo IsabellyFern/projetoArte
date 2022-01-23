@@ -12,6 +12,11 @@ import Home from './src/pages/home.js'
 import Config from './src/pages/conf.js'
 import Index from './teste/paginas/index.js'
 
+import Leonardo from './teste/artistas/leonardo.js'
+import Tarsila from './teste/artistas/tarsila.js'
+import Vicent from './teste/artistas/vicent.js'
+import Maria from './teste/artistas/maria.js'
+
 
 const Stack = createNativeStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
@@ -40,7 +45,7 @@ const HomeTabs = () => {
                     name="Info"
                     component={Config}
                     options= {{
-		            	tabBarLabel: 'Home',
+		            	tabBarLabel: 'Info',
 		            	tabBarIcon: (color) =>(
 		            		 <Icon name= "menu" color='#886796' size={26} />
 		            		)
@@ -67,11 +72,32 @@ const Router = () => {
                 <Stack.Screen
 	                name="Home"
 	                component={HomeTabs}
+	                options={{ headerShown: false }}
                 />
 
                  <Stack.Screen
 	                name="Index"
 	                component={Index}
+                />
+
+                <Stack.Screen
+	                name="Leonardo"
+	                component={Leonardo}
+                />
+
+                <Stack.Screen
+	                name="Tarsila"
+	                component={Tarsila}
+                />
+
+                <Stack.Screen
+	                name="Vicent"
+	                component={Vicent}
+                />
+
+                <Stack.Screen
+	                name="Maria"
+	                component={Maria}
                 />
 
               

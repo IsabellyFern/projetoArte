@@ -8,62 +8,131 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native'
+import Icon from 'react-native-vector-icons/AntDesign'
 
 
 const App = () => {
   const navigation = useNavigation();
   return (
-      <View style={styles.container}>
-        <TouchableOpacity
-          style={styles.buttonFacebookStyle}
-          activeOpacity={0.5}
-          onPress={() => {
-          navigation.navigate('Index');
-          }}
-          >
-          <View style={styles.buttonIconSeparatorStyle} />
-          <Text style={styles.buttonTextStyle}>
-            Lenardo da Vince
-          </Text>
-        </TouchableOpacity>
-      </View>
+        <View style={styles.container}>
+
+          <View > 
+            <Text style={styles.texto}>Escolha um artista:</Text>
+          </View>
+          <View style={styles.agrupamento}>
+                <Icon name="smileo" size={30} color='#886796' />
+                <TouchableOpacity
+                style={styles.buttonStyle}
+                activeOpacity={0.5}
+                onPress={() => {
+                navigation.navigate('Leonardo');
+                }}
+                >
+                <View  />
+                <Text style={styles.buttonTextStyle}>
+                  Lenardo da Vinci
+                </Text>
+              </TouchableOpacity>
+          </View> 
+
+          <View style={styles.agrupamento}>
+                <Icon name="smileo" size={30} color='#886796'/>
+                <TouchableOpacity
+                style={styles.buttonStyle}
+                activeOpacity={0.5}
+                onPress={() => {
+                navigation.navigate('Tarsila');
+                }}
+                >
+                <View  />
+                <Text style={styles.buttonTextStyle}>
+                  Tarsila do Amaral
+                </Text>
+              </TouchableOpacity>
+          </View> 
+          
+          <View style={styles.agrupamento}>
+                <Icon name="smileo" size={30} color='#886796'/>
+                <TouchableOpacity
+                style={styles.buttonStyle}
+                activeOpacity={0.5}
+                onPress={() => {
+                navigation.navigate('Vicent');
+                }}
+                >
+                <View  />
+                <Text style={styles.buttonTextStyle}>
+                  Vicent Van Gogh
+                </Text>
+              </TouchableOpacity>
+          </View> 
+          
+          <View style={styles.agrupamento}>
+                <Icon name="smileo" size={30} color='#886796'/>
+                <TouchableOpacity
+                style={styles.buttonStyle}
+                activeOpacity={0.5}
+                onPress={() => {
+                navigation.navigate('Maria');
+                }}
+                >
+                <View  />
+                <Text style={styles.buttonTextStyle}>
+                  Maria Auxiliadora
+                </Text>
+              </TouchableOpacity>
+          </View> 
+          
+          
+          
+
+
+        </View> 
+
+      
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    margin: 10,
-    marginTop: 200,
-    padding: 30,
+    alignItems: 'center',
+    backgroundColor: '#c6bef2',
   },
-  buttonFacebookStyle: {
+  buttonStyle: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#485a96',
+    backgroundColor: '#55585b',
     borderWidth: 0.5,
-    borderColor: '#fff',
-    height: 40,
-    borderRadius: 5,
+    borderColor: '#55585b',
+    height: 50,
+    borderRadius: 60,
     margin: 5,
-  },
-  buttonImageIconStyle: {
-    padding: 10,
-    margin: 5,
-    height: 25,
-    width: 25,
-    resizeMode: 'stretch',
   },
   buttonTextStyle: {
     color: '#fff',
     marginBottom: 4,
-    marginLeft: 10,
+    marginLeft: 15,
+    padding: 20,
   },
-  buttonIconSeparatorStyle: {
-    backgroundColor: '#fff',
-    width: 1,
-    height: 40,
+  agrupamento:{
+    alignItems: 'center',
+    flexDirection: 'row',
+    margin: 2,
+    
+
   },
+  testando: {
+    backgroundColor: '#c6bef2',
+
+  },
+  texto: {
+    margin: 10,
+    marginBottom: 80,
+    marginTop: 100,
+    fontSize: 20,
+  },
+
 });
 
 export default App;
